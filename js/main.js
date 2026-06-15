@@ -185,6 +185,9 @@ const currentSongTitle =
 const currentSongArtist =
     document.getElementById("currentSongArtist");
 
+const navCurrentSong =
+    document.getElementById("navCurrentSong");
+
 const playlistItems =
     document.querySelectorAll(".playlist-item");
 
@@ -360,6 +363,9 @@ function selectPlaylistItem(item, shouldPlay) {
     if (currentSongArtist)
         currentSongArtist.textContent = artist;
 
+    if (navCurrentSong)
+        navCurrentSong.textContent = `${title} — ${artist}`;
+
     if (src && audio.getAttribute("src") !== src) {
 
         audio.src = src;
@@ -397,6 +403,13 @@ playlistItems.forEach(item => {
     });
 
 });
+
+const activePlaylistItem =
+    document.querySelector(".playlist-item.active");
+
+if (activePlaylistItem) {
+    selectPlaylistItem(activePlaylistItem, false);
+}
 
 audio.addEventListener("ended", () => {
 
