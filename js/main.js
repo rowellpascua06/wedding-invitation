@@ -124,15 +124,15 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
 
         navbar.style.background =
-            "rgba(20,37,61,0.98)";
+            "linear-gradient(90deg, rgba(58, 38, 57, 0.98), rgba(85, 62, 81, 0.96))";
 
         navbar.style.boxShadow =
-            "0 5px 25px rgba(0,0,0,0.15)";
+            "0 5px 25px rgba(152,112,112,0.12)";
 
     } else {
 
         navbar.style.background =
-            "rgba(20,37,61,0.95)";
+            "linear-gradient(90deg, rgba(58, 38, 57, 0.96), rgba(85, 62, 81, 0.94))";
 
         navbar.style.boxShadow = "none";
 
