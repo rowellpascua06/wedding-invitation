@@ -149,7 +149,7 @@ document.querySelectorAll(".faq-item")
     .forEach(item => {
 
         const button =
-            item.querySelector("button");
+            item.querySelector(".faq-toggle");
 
         if (!button) return;
 
@@ -158,19 +158,10 @@ document.querySelectorAll(".faq-item")
 
         button.addEventListener("click", () => {
 
-            item.classList.toggle("open");
+            button.classList.toggle("active");
 
-            if (!answer) return;
-
-            if (item.classList.contains("open")) {
-
-                answer.style.maxHeight =
-                    answer.scrollHeight + "px";
-
-            } else {
-
-                answer.style.maxHeight = null;
-
+            if (answer) {
+                answer.classList.toggle("open");
             }
 
         });
