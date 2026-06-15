@@ -10,14 +10,17 @@
 ========================================== */
 
 :root {
-    --navy: #14253d;
-    --navy-light: #203551;
-    --cream: #f8f7f3;
+    --bg: #33243a;
+    --bg-light: #4f3952;
+    --cream: #f6e8db;
+    --rose: #dbb5b5;
+    --blush: #c39898;
+    --mauve: #987070;
     --white: #ffffff;
-    --text-light: rgba(255, 255, 255, 0.75);
-    --text-dark: #283342;
+    --text-light: rgba(255, 255, 255, 0.9);
+    --text-dark: #3b2634;
     --border-light: rgba(255, 255, 255, 0.12);
-    --border-dark: rgba(20, 37, 61, 0.10);
+    --border-dark: rgba(59, 35, 53, 0.18);
 
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Montserrat', sans-serif;
@@ -42,7 +45,7 @@ html {
 }
 
 body {
-    background: var(--navy);
+    background: var(--bg);
     color: var(--white);
     font-family: var(--font-body);
     overflow-x: hidden;
@@ -77,7 +80,7 @@ section {
 }
 
 .dark-section {
-    background: var(--navy);
+    background: var(--bg);
     color: var(--white);
 }
 
@@ -111,7 +114,7 @@ section h2 {
 .section-divider {
     width: 220px;
     height: 1px;
-    background: rgba(128, 145, 168, 0.25);
+    background: rgba(219, 181, 181, 0.23);
     margin: 30px auto 60px;
     position: relative;
 }
@@ -121,7 +124,7 @@ section h2 {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #7f9fc5;
+    background: var(--rose);
     position: absolute;
     left: 50%;
     top: -4px;
@@ -212,8 +215,8 @@ section h2 {
 
     background:
         linear-gradient(
-            rgba(20,37,61,0.70),
-            rgba(20,37,61,0.82)
+            rgba(152, 112, 112, 0.72),
+            rgba(89, 45, 72, 0.86)
         ),
         url("../images/hero.jpg");
 
@@ -228,7 +231,7 @@ section h2 {
     background:
         linear-gradient(
             transparent,
-            rgba(20,37,61,0.25)
+            rgba(89, 45, 72, 0.25)
         );
 }
 
@@ -285,7 +288,7 @@ section h2 {
     width: 8px;
     height: 8px;
 
-    background: #7f9fc5;
+    background: var(--rose);
     border-radius: 50%;
 
     position: absolute;
@@ -355,7 +358,7 @@ section h2 {
 ========================================== */
 
 .countdown-section {
-    background: var(--navy);
+    background: linear-gradient(180deg, rgba(152,112,112,0.18), rgba(89,45,72,0.16));
 
     padding: 80px 24px;
     text-align: center;
@@ -476,11 +479,16 @@ section h2 {
 .detail-card {
     width: min(100%, 620px);
     margin: 0 auto 26px;
+    padding-top: 18px;
 }
 
-.icon {
-    font-size: 1.6rem;
-    margin-bottom: 16px;
+.detail-image {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .label,
@@ -580,7 +588,7 @@ section h2 {
 }
 
 .timeline-item span {
-    color: var(--navy);
+    color: rgba(147, 113, 114, 0.95);
     letter-spacing: 3px;
     font-size: 11px;
     text-transform: uppercase;
@@ -1166,7 +1174,7 @@ section h2 {
         width: 100%;
         height: calc(100svh - 65px);
 
-        background: var(--navy);
+        background: var(--bg);
 
         flex-direction: column;
         justify-content: flex-start;
